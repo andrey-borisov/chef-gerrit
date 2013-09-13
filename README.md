@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 gerrit Cookbook
 ===============
 TODO: Enter the cookbook description here.
@@ -66,3 +67,9 @@ e.g.
 License and Authors
 -------------------
 Authors: TODO: List authors
+=======
+chef-gerrit
+===========
+
+chef-gerrit
+>>>>>>> dd51ec177af50c4a1ef4382663d04b5e9a697f41
