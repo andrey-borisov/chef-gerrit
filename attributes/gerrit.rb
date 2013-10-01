@@ -1,3 +1,5 @@
+# Gerrit's attributes
+
 default['gerrit']['home'] = "/opt/gerrit/"
 default['gerrit']['user'] = "gerrit"
 default['gerrit']['group'] = "gerrit"
