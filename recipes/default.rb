@@ -66,3 +66,33 @@ execute "gerrits war installation" do
   action :run
 end
 
+template "#{node['gerrit']['home']}etc/gerrit.config" do
+  source "gerrit/gerrit.config.erb"
+  owner "gerrit"
+  group "gerrit"
+  mode "0664"
+end
+
+template "/etc/default/gerritcodereview" do
+  source "gerrit/gerritcodereview.erb"
+  owner "gerrit"
+  group "gerrit"
+  mode "0664"
+end
+
+
+
+template "/etc/init.d/gerrit" do
+  source "gerrit/init.d.erb"
+  owner "root"
+  group "root"
+  mode "775"
+  notifies :restart, "service[gerrit]", :delayed
+end
+
+
+
+service "gerrit" do
+  action :enable
+end
+
